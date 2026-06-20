@@ -23,7 +23,9 @@ cask "leash" do
   auto_updates true
   depends_on macos: ">= :sonoma"
 
-  app "Leash.app"
+  # The DMG ships the bundle as ClaudeNotifyMac.app (no PRODUCT_NAME rename in the
+  # build); install it to /Applications as Leash.app.
+  app "ClaudeNotifyMac.app", target: "Leash.app"
 
   zap trash: [
     "~/.claude-notify",
