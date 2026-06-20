@@ -21,7 +21,7 @@ cask "leash" do
 
   # Sparkle delivers in-app updates; don't let Homebrew fight it.
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   # The DMG ships the bundle as ClaudeNotifyMac.app (no PRODUCT_NAME rename in the
   # build); install it to /Applications as Leash.app.
