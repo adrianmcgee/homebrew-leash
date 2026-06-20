@@ -10,8 +10,8 @@
 # The placeholder sha256 below is intentional — `brew` will refuse to install
 # until release.sh stamps the real checksum, so a half-staged cask can't mislead.
 cask "leash" do
-  version "1.1"
-  sha256 "49c53a9f4c6701d40edec09840fd4cb0171281f35d34f79ec7d1d58461ea0253"
+  version "1.2"
+  sha256 "6d6ca032884cdb039e3fbb1e6ecb3a50f0db661f93fee0bbcb9225b01bcc397c"
 
   url "https://github.com/adrianmcgee/leash/releases/download/v#{version}/Leash.dmg",
       verified: "github.com/adrianmcgee/leash/"
@@ -23,9 +23,7 @@ cask "leash" do
   auto_updates true
   depends_on macos: :sonoma
 
-  # The DMG ships the bundle as ClaudeNotifyMac.app (no PRODUCT_NAME rename in the
-  # build); install it to /Applications as Leash.app.
-  app "ClaudeNotifyMac.app", target: "Leash.app"
+  app "Leash.app"
 
   zap trash: [
     "~/.claude-notify",
