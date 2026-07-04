@@ -11,7 +11,7 @@
 # until release.sh stamps the real checksum, so a half-staged cask can't mislead.
 cask "leash" do
   version "1.9"
-  sha256 "eeb9c380172dd5d1e348542197db790235978ad002d9d0c736cae5241d0bc152"
+  sha256 "9f9cb3ff2a816de2007bbc14bb487ed2d046be0b77fd8f8082a2b58bf6b1c9fa"
 
   url "https://github.com/adrianmcgee/leash/releases/download/v#{version}/Leash.dmg",
       verified: "github.com/adrianmcgee/leash/"
