@@ -10,8 +10,8 @@
 # The placeholder sha256 below is intentional — `brew` will refuse to install
 # until release.sh stamps the real checksum, so a half-staged cask can't mislead.
 cask "leash" do
-  version "2.10"
-  sha256 "99815e745a1c8d9f11e05e21cc3e6987573e2ad6b1d2d64e5edbb71baf36d349"
+  version "2.11"
+  sha256 "9442e11f67dcd060cfebad0d8cb2ab5cbf7e80e2bf396f28bf303225ce5e4c8b"
 
   url "https://github.com/adrianmcgee/leash/releases/download/v#{version}/Leash.dmg",
       verified: "github.com/adrianmcgee/leash/"
