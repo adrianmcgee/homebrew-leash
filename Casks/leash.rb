@@ -1,19 +1,14 @@
-# Homebrew cask for Leash — STAGED, not yet live.
+# Homebrew cask for Leash.
 #
-# This goes live the first time `scripts/release.sh --mac` produces a notarized
-# Developer-ID DMG (gated on the signing certificate). On each release, release.sh
-# fills in `version` + `sha256` and publishes this file to the tap repo
-# `adrianmcgee/homebrew-leash`, after which:
+# Release automation fills in `version` + `sha256` for the notarized Developer-ID
+# archive and publishes this file to `adrianmcgee/homebrew-leash`, after which:
 #
 #   brew install --cask adrianmcgee/leash/leash
-#
-# The placeholder sha256 below is intentional — `brew` will refuse to install
-# until release.sh stamps the real checksum, so a half-staged cask can't mislead.
 cask "leash" do
-  version "2.20"
-  sha256 "11c05217562e3e0e19a7195af52869c5749316d0f24f25b18c3c568ec7f34cb6"
+  version "2.21"
+  sha256 "ff0c7fb5d2ce1b5a62dad0c412f50be11db9338bc545f21f079a1591fd5e4c9d"
 
-  url "https://github.com/adrianmcgee/leash/releases/download/v#{version}/Leash.dmg",
+  url "https://github.com/adrianmcgee/leash/releases/download/v#{version}/Leash-#{version}.zip",
       verified: "github.com/adrianmcgee/leash/"
   name "Leash"
   desc "Remote approvals and notifications for your AI coding agent"
